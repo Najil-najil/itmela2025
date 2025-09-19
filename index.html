@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stellar — Fully Styled Website (HTML + CSS only)</title>
+  <meta name="description" content="A modern, responsive single-page website template built with only HTML and CSS. No JavaScript." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Controls (theme + mobile nav) -->
+  <!-- Theme toggle: check = light, unchecked = dark -->
+  <input id="theme-toggle" class="visually-hidden" type="checkbox" aria-hidden="true" />
+  <!-- Mobile nav toggle (checkbox) -->
+  <input id="nav-toggle" class="visually-hidden" type="checkbox" aria-hidden="true" />
+
+  <div class="site-wrapper">
+    <header class="site-header" id="top" role="banner">
+      <div class="container header-inner">
+        <a href="#" class="brand" aria-label="Stellar Home">
+          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6c5ce7"/><stop offset="1" stop-color="#00b894"/></linearGradient></defs>
+            <circle cx="12" cy="12" r="10" fill="url(#g)"></circle>
+            <path d="M7 12c1.5 0 2.5-4 5-4s3.5 4 5 4" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-text">Stellar</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <!-- mobile nav label -->
+          <label for="nav-toggle" class="nav-toggle" aria-hidden="false" tabindex="0" role="button" title="Toggle navigation">
+            <span class="hamburger" aria-hidden="true"></span>
+            <span class="sr-only">Toggle navigation</span>
+          </label>
+
+          <ul id="nav-list" class="nav-list" role="menubar">
+            <li role="none"><a role="menuitem" href="#features">Features</a></li>
+            <li role="none"><a role="menuitem" href="#portfolio">Work</a></li>
+            <li role="none"><a role="menuitem" href="#pricing">Pricing</a></li>
+            <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <!-- theme toggle label -->
+          <label for="theme-toggle" class="theme-toggle" title="Toggle color theme" role="button" aria-pressed="false">🌗</label>
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title">Beautiful, performant websites — built for humans.</h1>
+            <p class="hero-sub">Design-forward, accessible, and fast. A modern single-page template to launch your project quickly.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#portfolio">View Work</a>
+              <a class="btn btn-ghost" href="#pricing">See Pricing</a>
+            </div>
+            <ul class="trust">
+              <li>✅ Accessible</li>
+              <li>⚡ Fast</li>
+              <li>♻️ Lightweight</li>
+            </ul>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 600 420" class="hero-svg" role="img" aria-label="Decorative artwork">
+              <defs>
+                <linearGradient id="lg" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6C5CE7" stop-opacity="0.95"/>
+                  <stop offset="1" stop-color="#00B894" stop-opacity="0.95"/>
+                </linearGradient>
+              </defs>
+              <rect x="20" y="20" rx="24" ry="24" width="560" height="380" fill="url(#lg)"/>
+              <g transform="translate(40,80)" fill="#fff" opacity="0.12">
+                <circle cx="60" cy="60" r="48"></circle>
+                <circle cx="180" cy="140" r="80"></circle>
+                <rect x="300" y="40" rx="12" width="180" height="100"></rect>
+              </g>
+              <g transform="translate(50,40)" fill="#fff" opacity="0.9" font-family="system-ui,Segoe UI,Roboto">
+                <text x="20" y="200" font-size="22" fill="#ffffff" opacity="0.95">Design • Code • Launch</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="section features">
+        <div class="container">
+          <h2 class="section-title">What you get</h2>
+          <p class="section-lead">A full front-end package: design, components, and interactions — ready to plug in your content.</p>
+
+          <div class="cards grid-3">
+            <article class="card">
+              <div class="card-icon">🎨</div>
+              <h3>Pixel-perfect UI</h3>
+              <p>Thoughtful typography, spacing, and color systems for consistent branding.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">⚡</div>
+              <h3>Performance first</h3>
+              <p>Small bundle, no heavy frameworks—fast load times and snappy interactions.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🔒</div>
+              <h3>Accessible</h3>
+              <p>Semantic HTML, keyboard-friendly components, and ARIA attributes where needed.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="section portfolio">
+        <div class="container">
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-lead">A few curated examples (click to preview).</p>
+
+          <div class="portfolio-grid">
+            <!-- Each item links to its modal via #id (CSS :target) -->
+            <article class="portfolio-item">
+              <a class="portfolio-link" href="#modal-ecommerce" aria-haspopup="dialog" aria-controls="modal-ecommerce">
+                <div class="thumb" aria-hidden="true">
+                  <svg viewBox="0 0 100 70"><rect width="100" height="70" rx="6" fill="#6C5CE7"></rect></svg>
+                </div>
+                <h4>Ecommerce Dashboard</h4>
+                <p class="muted">Analytics • React-free</p>
+              </a>
+            </article>
+
+            <article class="portfolio-item">
+              <a class="portfolio-link" href="#modal-portfolio" aria-haspopup="dialog" aria-controls="modal-portfolio">
+                <div class="thumb" aria-hidden="true">
+                  <svg viewBox="0 0 100 70"><rect width="100" height="70" rx="6" fill="#00B894"></rect></svg>
+                </div>
+                <h4>Portfolio Website</h4>
+                <p class="muted">Design • JAMstack</p>
+              </a>
+            </article>
+
+            <article class="portfolio-item">
+              <a class="portfolio-link" href="#modal-landing" aria-haspopup="dialog" aria-controls="modal-landing">
+                <div class="thumb" aria-hidden="true">
+                  <svg viewBox="0 0 100 70"><rect width="100" height="70" rx="6" fill="#FF7675"></rect></svg>
+                </div>
+                <h4>Marketing Landing</h4>
+                <p class="muted">Conversion • SEO</p>
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <!-- CSS-only modals using :target -->
+        <div id="modal-ecommerce" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-ecommerce-title" tabindex="-1">
+          <div class="modal-panel">
+            <a class="modal-close" href="#portfolio" aria-label="Close preview">&times;</a>
+            <div class="modal-body">
+              <div class="modal-image" aria-hidden="true">
+                <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" rx="12" fill="#6C5CE7"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28" fill="#fff">Ecommerce Preview</text></svg>
+              </div>
+              <div class="modal-content">
+                <h3 id="modal-ecommerce-title">Ecommerce Dashboard</h3>
+                <p>A lightweight dashboard with charts and responsive panels.</p>
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View live</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-portfolio" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-portfolio-title" tabindex="-1">
+          <div class="modal-panel">
+            <a class="modal-close" href="#portfolio" aria-label="Close preview">&times;</a>
+            <div class="modal-body">
+              <div class="modal-image" aria-hidden="true">
+                <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" rx="12" fill="#00B894"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28" fill="#fff">Portfolio Preview</text></svg>
+              </div>
+              <div class="modal-content">
+                <h3 id="modal-portfolio-title">Portfolio Website</h3>
+                <p>A personal portfolio template focusing on storytelling and performance.</p>
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View live</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-landing" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-landing-title" tabindex="-1">
+          <div class="modal-panel">
+            <a class="modal-close" href="#portfolio" aria-label="Close preview">&times;</a>
+            <div class="modal-body">
+              <div class="modal-image" aria-hidden="true">
+                <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" rx="12" fill="#FF7675"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="28" fill="#fff">Landing Preview</text></svg>
+              </div>
+              <div class="modal-content">
+                <h3 id="modal-landing-title">Marketing Landing</h3>
+                <p>Conversion-focused landing page with A/B-ready sections.</p>
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">View live</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="section pricing">
+        <div class="container">
+          <h2 class="section-title">Pricing</h2>
+          <p class="section-lead">Simple pricing for freelancers and teams.</p>
+
+          <div class="grid-3 pricing-grid">
+            <div class="price-card">
+              <h3>Starter</h3>
+              <p class="price">₹9,999<span class="per">/one-off</span></p>
+              <ul>
+                <li>1 Landing page</li>
+                <li>Responsive design</li>
+                <li>Email support (7 days)</li>
+              </ul>
+              <a class="btn btn-ghost" href="#contact">Choose</a>
+            </div>
+
+            <div class="price-card popular">
+              <div class="ribbon">Popular</div>
+              <h3>Pro</h3>
+              <p class="price">₹24,999<span class="per">/one-off</span></p>
+              <ul>
+                <li>Up to 5 pages</li>
+                <li>Portfolio & blog</li>
+                <li>2 weeks support</li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Choose</a>
+            </div>
+
+            <div class="price-card">
+              <h3>Team</h3>
+              <p class="price">Custom<span class="per">/contact</span></p>
+              <ul>
+                <li>Custom features</li>
+                <li>Performance tuning</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="btn btn-ghost" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="container narrow">
+          <h2 class="section-title">Let’s build something</h2>
+          <p class="section-lead">Tell me about your project — this is a demo static form.</p>
+
+          <!-- Plain HTML form (no JS). Add action to point to your backend or 3rd-party form endpoint. -->
+          <form id="contact-form" class="form" method="post" action="#" novalidate>
+            <div class="form-grid">
+              <label class="form-field">
+                <span class="label-text">Name</span>
+                <input type="text" name="name" id="name" required minlength="2" placeholder="Your name">
+              </label>
+
+              <label class="form-field">
+                <span class="label-text">Email</span>
+                <input type="email" name="email" id="email" required placeholder="you@example.com">
+              </label>
+
+              <label class="form-field full">
+                <span class="label-text">Message</span>
+                <textarea name="message" id="message" rows="6" required minlength="10" placeholder="Tell me about your project..."></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send message</button>
+                <button class="btn btn-ghost" type="reset">Reset</button>
+              </div>
+            </div>
+            <p class="form-note muted">To make the form live: set the <code>action</code> attribute to your backend or service (Formspree/Netlify Forms/etc.).</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>© <span id="year">2025</span> Stellar — Built with care.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
